@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Planet Image Changer",
+  "version": "1.0",
+  "description": "Change planet images in OGame.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "run_at": "document_end",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.ogame.gameforge.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "planets/*.png",
+        "images/*.png",
+        "custom_planet_*.png"
+      ],
+      "matches": ["*://*.ogame.gameforge.com/*"]
+    }
+  ]
+}

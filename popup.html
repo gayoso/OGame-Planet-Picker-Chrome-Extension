@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Set the background image for the popup and black border */
+        body {
+            width: 200px;
+            font-family: Arial, sans-serif;
+            background-image: url('images/background.png');
+            background-size: cover;
+            color: #6f9fc8; /* General text color */
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 8px;
+        }
+        /* "Choose a Planet" - bigger text with title background */
+        h3#choosePlanet {
+            color: #6f9fc8;
+            font-size: 18px;
+            background-image: url('images/title_background.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            padding: 10px;
+            text-align: center;
+        }
+        /* "Choose an Image" - smaller text with title background */
+        h3#chooseImage {
+            color: #6f9fc8;
+            font-size: 16px;
+            background-image: url('images/title_background.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            padding: 10px;
+            text-align: center;
+        }
+        .planet-selector {
+            margin-bottom: 10px;
+        }
+        /* Dropdown styling */
+        select#planetSelect {
+            width: 100%;
+            padding: 5px;
+            background-color: #10181f;
+            color: #6f9fc8;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+        .image-selector {
+            margin-bottom: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        /* Button container for the delete icon - center alignment */
+        .button-container.center {
+            display: flex;
+            justify-content: center; /* Center the delete button */
+            margin-bottom: 10px;
+        }
+        /* Button styles with transparent background */
+        .button {
+            width: 48%;
+            height: 30px;
+            background-image: url('images/button_off.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            border: none;
+            cursor: pointer;
+            color: #767f88;
+            font-weight: bold;
+            text-align: center;
+            background-color: transparent;
+        }
+        .button:hover, .button:active {
+            background-image: url('images/button_on.png');
+            background-size: 100% 100%;
+            color: #ffffff;
+        }
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .image-grid img {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 4px;
+        }
+        .image-grid img.selected {
+            border-color: #6f9fc8;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Darker custom scrollbar */
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #556e7d;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #283a4a;
+        }
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #3c5161;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="choosePlanet">Choose a Planet</h3>
+    <div class="planet-selector">
+        <select id="planetSelect"></select>
+    </div>
+
+    <div class="button-container">
+        <button id="applyButton" class="button">Apply</button>
+        <button id="resetButton" class="button">Reset</button>
+    </div>
+
+    <h3 id="chooseImage">Choose an Image</h3>
+    <div class="image-selector">
+        <div id="imageGrid" class="image-grid"></div>
+        <!-- Hidden file input for custom planet image upload -->
+        <input type="file" id="fileInput" accept="image/png">
+    </div>
+    <div class="button-container center">
+        <button id="removeCustomPlanetButton" class="button">Delete Icon</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
