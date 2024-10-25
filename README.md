@@ -1,6 +1,6 @@
 # OGame-Planet-Picker-Chrome-Extension
 
-![alt text](https://github.com/gayoso/OGame-Planet-Picker-Chrome-Extension/blob/main/preview_planetas.png?raw=true)
+![alt text](https://github.com/gayoso/OGame-Planet-Picker-Chrome-Extension/blob/main/preview_popup.png) ![alt text](https://github.com/gayoso/OGame-Planet-Picker-Chrome-Extension/blob/main/preview_planetas.png?raw=true)
 
 Are you tired of your planets always looking the same because you go for pos 8 to maximize fields?
 Well here is a Chrome extension that lets you change the displayed planet icon for your planets on OGame.
